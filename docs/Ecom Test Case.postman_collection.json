@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "168ab564-b628-4507-bc28-c4ef52aebc77",
+		"name": "Ecom Test Case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6224397"
+	},
+	"item": [
+		{
+			"name": "LoginTest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <your-jwt-token>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"vishalchawla\",\n  \"password\": \"Password@123#\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://a68p2cnnk2.execute-api.us-east-2.amazonaws.com/demo/login",
+					"protocol": "https",
+					"host": [
+						"a68p2cnnk2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"demo",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://<your-api-id>.execute-api.<region>.amazonaws.com/dev/customer \\\n  -H \"Authorization: Bearer <your-jwt-token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{ \"name\": \"John\", \"age\": 30, \"phone\": \"1234567890\", \"dob\": \"1995-01-01\", \"address\": \"Somewhere\" }'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "TokenValidationTest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <your-jwt-token>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"vishalchawla\",\n  \"password\": \"Password@123#\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://a68p2cnnk2.execute-api.us-east-2.amazonaws.com/demo/login",
+					"protocol": "https",
+					"host": [
+						"a68p2cnnk2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"demo",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://<your-api-id>.execute-api.<region>.amazonaws.com/dev/customer \\\n  -H \"Authorization: Bearer <your-jwt-token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{ \"name\": \"John\", \"age\": 30, \"phone\": \"1234567890\", \"dob\": \"1995-01-01\", \"address\": \"Somewhere\" }'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "HealthCheck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <your-jwt-token>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"John\", \"age\": 30, \"phone\": \"1234567890\", \"dob\": \"1995-01-01\", \"address\": \"Somewhere\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://a68p2cnnk2.execute-api.us-east-2.amazonaws.com/demo/health",
+					"protocol": "https",
+					"host": [
+						"a68p2cnnk2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"demo",
+						"health"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://<your-api-id>.execute-api.<region>.amazonaws.com/dev/customer \\\n  -H \"Authorization: Bearer <your-jwt-token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{ \"name\": \"John\", \"age\": 30, \"phone\": \"1234567890\", \"dob\": \"1995-01-01\", \"address\": \"Somewhere\" }'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "SalesForceCustomerPushAPI",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJMdzB5RzVVcnhzSnMwMnpNT242ZnkySUFBMFgyXC9nOE5GQ2dYR1hBbGNkcz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlMTViYjU5MC1mMGIxLTcwMmEtNjE3ZC1jNjAzZTAzNDg1M2IiLCJldmVudF9pZCI6ImVkMzEwM2YzLTYyOTItNGE5Yi04MTgwLWNhYjM1NDg2MGI5ZiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3NDQ2MzM0MzAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX1pYcE5adEVXaiIsImV4cCI6MTc0NDYzNzAzMCwiaWF0IjoxNzQ0NjMzNDMwLCJqdGkiOiJhNzkyYjc4OS00NzY1LTQ3MWMtOGE2YS02MDNkNDA5ZGUzMDYiLCJjbGllbnRfaWQiOiJpdHVpbnZhY2VoNmc0cmFucm9wZDVrMW1jIiwidXNlcm5hbWUiOiJ2aXNoYWxjaGF3bGEifQ.DYk7myXXIH9HIXJRS-ktkzUqv5pA8bKlQFl6ZQ2VDuOaE2vxlTVzvXqscSTfohkdQSOQpf7nj_79KkOru1cF9w5bEjZ7lcnG5a9_0VM1PUTQoO7daJZDEIJAF6WDofEUAC95rJc8Bg6JvWUF_nhDsC080H2cl4GFR-VJYm_RWDYXP4rSa0rqaGTIVD2UrTZXmFgYASvvsM5C2cWv2B1NJHCq4Q9tC6m_ces5PTlE2yHI0uDSGYpaRICUDY2hESvtwjfn7Kam2wQZXvZOk8QkJUV6v8wfPk8Q1LvvEOOvBKSnSbNHqibP4VSr6JN4N-xjDz5qtvGZPrHaeWs4qOTYbg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "vb0WA6RvA97WvFoRFGIdnaegYx3wvt7FaoGYuqFG",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"pv sindhu\",\n  \"age\": 31,\n  \"phone\": \"555-123-4567\",\n  \"dob\": \"1988-05-15\",\n  \"address\": \"123 Quincy, Anytown, USA\",\n  \"email\": \"john.doe@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://a68p2cnnk2.execute-api.us-east-2.amazonaws.com/demo/customers",
+					"protocol": "https",
+					"host": [
+						"a68p2cnnk2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"demo",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJMdzB5RzVVcnhzSnMwMnpNT242ZnkySUFBMFgyXC9nOE5GQ2dYR1hBbGNkcz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlMTViYjU5MC1mMGIxLTcwMmEtNjE3ZC1jNjAzZTAzNDg1M2IiLCJldmVudF9pZCI6IjFmYzkxOTQ1LTc3NGUtNDgwMS1hMjAzLTM4MGQ0YWNmY2U4NCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3NDQ2MzI2MjEsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX1pYcE5adEVXaiIsImV4cCI6MTc0NDYzNjIyMSwiaWF0IjoxNzQ0NjMyNjIxLCJqdGkiOiI1MGU5NDRlMC1hNzZlLTQ2MDQtYWRlNy1mMzkxM2IyOTc5ODUiLCJjbGllbnRfaWQiOiJpdHVpbnZhY2VoNmc0cmFucm9wZDVrMW1jIiwidXNlcm5hbWUiOiJ2aXNoYWxjaGF3bGEifQ.aYz3UoMcdModYTxYfVSMxaAQLNM7pDAE_Lovda5c5ehJzVnhUXFDN3KdySs_MtytmJ4MSfqcUZ_S8lYF2pm_fDJQ3FP5Ku7fwkwSCXTChnRkuSVBMZq8hZd73-CUH-uwE95LUr3QhPYf50eh9N2xMiNZOsUoPJXb7U4O_0X45VhcrLxawgTj8_Y7HjiHilfBD0Ypomk3tN2TvMlXvh6peeCGiCjPLWLpoz55gdVIkH3_mzH7t6nu_i2_K6upnB8A-WQAdRzuB8S3KnbZ3SVGNkXkARahwHJEzR5i3aSmhgE5ZLTw9y3mAD4-_n2gs6IC5xN5GWqi6N8Ql0h70hNSwA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-openai-api-key",
+						"value": "yourapikey",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"table_name\": \"CustomerData\",\n  \"prompt\": \"Analyze this data and tell me the key trends.\",\n  \"search_query\": \"john\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lger9st1a3.execute-api.us-east-2.amazonaws.com/test/getCustomerDetails",
+					"protocol": "https",
+					"host": [
+						"lger9st1a3",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"test",
+						"getCustomerDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

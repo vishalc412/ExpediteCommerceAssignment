@@ -1,0 +1,9 @@
+python-dotenv
+PyJWT
+Pylance
+authlib
+werkzeug
+flask
+requests
+langchain-community
+boto3

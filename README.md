@@ -10,7 +10,7 @@ I've created a demo that shows how to build a modern AI-powered SaaS application
 
 The app follows a serverless, event-driven approach with these main components:
 
-- **Frontend**: Vue.js UI where users interact with AI agents and customer data
+- **Frontend**: Vue.js UI where users interact with AI agents and customer data. This is deployed on S3 bucket.
 - **Backend**: AWS Lambda functions handling API requests, AI orchestration, and Salesforce integration
 - **AI Engine**: Custom API set of Open AI
 - **Data Layer**: DynamoDB for storing structured data and maintaining agent state
@@ -143,8 +143,14 @@ You'll need:
 
 ### Demo Login
 
-For the demo, use:
+For the demo, use: http://customer-search-app-ecom-demo.s3-website.us-east-2.amazonaws.com/
 - Email: VishalChawla
 - Password: Password@123#
 
+This will be valid for next 2 days
+
+I have added collection along with project for backend or testing og the API from postman
+
 Feel free to reach out if you have any questions or feedback!
+
+Mermaid diagram: https://www.mermaidchart.com/raw/9933ddc8-12d6-42c6-a923-1f6c2ab3b706?theme=light&version=v0.1&format=svg

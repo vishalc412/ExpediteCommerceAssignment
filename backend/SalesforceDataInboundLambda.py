@@ -13,7 +13,6 @@ import boto3
 from datetime import datetime
 import os
 import base64
-import urllib.request
 import time
 
 # Initialize DynamoDB
